@@ -1,0 +1,50 @@
+body{
+	min-width: 1024px;
+	height: 1500px;
+	margin: 0;
+}
+.lines{
+	position: relative;
+	z-index: 1;
+}
+.lines svg{
+	display: block;
+	margin: 0 auto;
+	height: 100vh;
+}
+.lines.perspective{
+	perspective: 50em;
+}
+.lines.perspective svg{
+	transform: rotateX(50deg);
+}
+.back{
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+}
+.img{
+	height: 100vh;
+	background: url('mall.jpg') no-repeat center center;
+	background-size: 120%;
+	opacity: 0;
+}
+.st0{
+	fill:#FFFFFF;
+	stroke:green;
+	stroke-width:17;
+	stroke-miterlimit:10;
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+}
+@keyframes dash {
+	0% {
+		stroke-dashoffset: 1000;
+	}
+	50% {
+		stroke-dashoffset: 0;
+	}
+	100%{
+		stroke-dashoffset: -1000;
+	}
+}
